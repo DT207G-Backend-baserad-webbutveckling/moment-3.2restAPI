@@ -16,10 +16,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Anslut till MongoDB-databasen lokalt
-mongoose.connect('mongodb://localhost:27017/work', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true
-})
+mongoose.connect('mongodb://localhost:27017/work')
     .then(() => {
         console.log('Connected to MongoDB');
     })
